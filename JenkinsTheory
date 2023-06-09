@@ -1,0 +1,57 @@
+Jenkis:
+* Devops team create a build (.exe file)
+* The build is created using maven( Devops team use maven to create the build )
+* Developers push their code to repository ,after that devops team make the build using that code
+* Once the build is ready, QA team start testing and push automation code to repository
+* After that DEVOPS team run the test cases through JENKIS
+* DEVEOPS team, do only Smoke and Sanity Test to check the build is stable 
+* After that test is passed , Jenkins send the message to all through mail
+* QA team download the build from Jenkins only  for testing.
+* At the end of the day ,Developers push the code to GIT , after that Devops team, get the code and create a build , within a night the build will be created, this is called CICD.
+* After that QA team download the BUILD from Jenkins and start testing.
+* Jenkins will be installed in DEVOPS env, we have to configure the ebb for Jenkins 
+* Jenkins is seamless Execution, everything happen in the backend
+
+
+Steps:
+  * Jenkins is a open source tool ,we need to download it.
+  * Jenkins is a Webbased application 
+  * we need to use the localhost8080
+  * 8080 is the default port 
+  * give initial password from secret file 
+  * after that give username and password and emailid
+once the configuration done, 
+* open the localhost8080
+* then, using jenkin we can execute the project in 2 ways 
+  1. one is, FREE STYLE project (i.e) using run.bat ( this is for practise purpose)
+  2. anothe one is, Maven Projects(Executing using pom.xlm)(real time )
+
+Creating project:
+
+  * Enter the project name.
+  * select the project type. 
+  * click ok
+  * set configurations for the page .
+  * select the Build and add the build step->select top level  maven target
+  * provide the project loction
+  * click apply and save.
+  * go to project dashboard -> a new project is created 
+  * run the project-> select the project - click on build now -> it will start build
+  * project appears in blue color  means passed, grey means not yet run, red means error.
+  
+  --> for maven project 
+  * we need to add maven plugins and then  add in all the available maven plugins  .
+  * Add JDK nameand path.
+  * we need to give the root pom location.
+  * Goals&option : clean install
+  * 
+  
+
+Continous Integration( CI ):
+  * Maven (Build tool)
+  * Jenkins (CI tool)
+  * GIT(Local Repo)
+  * GitHUb(Remote Repo)
+
+
+
